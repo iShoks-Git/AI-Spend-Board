@@ -6,7 +6,7 @@ export default function Header({ months, start, end, onExport }) {
       <div>
         <p className="pill mb-3">Live dashboard</p>
         <h1 className="display text-[clamp(2rem,4.5vw,3.6rem)]">
-          AI Spend & <span className="italic text-ember">Efficiency</span>
+          AI Spend & <span className="font-bold text-bone">Efficiency</span>
         </h1>
         <p className="mt-2 text-xs text-white/45">
           9 providers · {months} month{months !== 1 ? "s" : ""} selected · <span className="font-mono">{start} → {end}</span>

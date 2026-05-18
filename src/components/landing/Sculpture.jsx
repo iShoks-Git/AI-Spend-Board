@@ -33,7 +33,7 @@ export default function Sculpture() {
         <div className="md:col-span-4 md:sticky md:top-32 md:self-start">
           <p className="pill mb-6">01 — Sculpture</p>
           <h2 className="display text-[clamp(2.4rem,5vw,4.2rem)]">
-            Cost, rendered in <span className="italic text-ember">three dimensions</span>.
+            Cost, rendered in <span className="font-bold text-bone">three dimensions</span>.
           </h2>
           <p className="mt-6 max-w-md text-white/60">
             Move your cursor. Every bar is a month; every height a cheque written

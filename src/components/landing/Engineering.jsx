@@ -20,7 +20,7 @@ export default function Engineering() {
           <div className="max-w-2xl">
             <p className="pill mb-6">02 — Engineering</p>
             <h2 className="display text-[clamp(2.4rem,5vw,4.6rem)]">
-              Built like an <span className="italic text-ember">instrument</span>,<br/>not a dashboard.
+              Built like an <span className="font-bold text-bone">instrument</span>,<br/>not a dashboard.
             </h2>
           </div>
           <motion.p style={{ y: dy }} className="max-w-sm text-white/55">
