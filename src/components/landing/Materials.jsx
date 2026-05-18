@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const MATERIALS = [
   {
@@ -29,35 +28,46 @@ const MATERIALS = [
 ];
 
 export default function Materials() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${(MATERIALS.length - 1) * 100}%`]);
-
   return (
-    <section id="materials" ref={ref} className="relative" style={{ height: `${MATERIALS.length * 100}vh` }}>
-      <div className="sticky top-0 flex h-screen w-full items-center overflow-hidden">
-        <div className="pointer-events-none absolute left-0 right-0 top-1/2 -translate-y-1/2 px-5 md:px-8">
-          <div className="mx-auto flex max-w-[1400px] items-baseline justify-between text-xs uppercase tracking-[0.25em] text-white/35">
-            <span>Materials</span><span className="font-mono">/ 04</span>
-          </div>
+    <section id="materials" className="relative py-24 md:py-32">
+      <div className="mx-auto max-w-[1400px] px-5 md:px-8">
+        <div className="mb-16 flex items-baseline justify-between">
+          <p className="pill">Materials</p>
+          <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/35">/ 04</span>
         </div>
-        <motion.div style={{ x }} className="flex h-full">
+
+        <div className="space-y-px">
           {MATERIALS.map((m, i) => (
-            <article key={m.n} className="flex h-full w-screen shrink-0 items-center px-5 md:px-8">
-              <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-10 md:grid-cols-12">
-                <div className="md:col-span-5">
-                  <p className="font-mono text-sm text-ember">{m.n}</p>
-                  <h3 className="display mt-3 text-[clamp(3rem,7vw,6.5rem)]">{m.title}</h3>
-                </div>
-                <div className="md:col-span-6 md:col-start-7">
-                  <p className="text-lg leading-relaxed text-white/70 md:text-xl">{m.desc}</p>
-                  <p className="mt-8 font-mono text-xs uppercase tracking-[0.18em] text-white/40">{m.detail}</p>
-                  <div className="mt-10 h-px w-32 bg-gradient-to-r from-ember to-transparent" />
-                </div>
+            <motion.article
+              key={m.n}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-15%" }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="group relative grid grid-cols-1 items-baseline gap-6 border-t border-white/[0.08] py-12 md:grid-cols-12 md:gap-10 md:py-16"
+            >
+              <div className="md:col-span-1">
+                <p className="font-mono text-sm text-ember">{m.n}</p>
               </div>
-            </article>
+
+              <div className="md:col-span-4">
+                <h3 className="display text-[clamp(2.6rem,6vw,5rem)] leading-[0.95]">
+                  {m.title}
+                </h3>
+              </div>
+
+              <div className="md:col-span-6 md:col-start-7">
+                <p className="text-base leading-relaxed text-white/65 md:text-lg">{m.desc}</p>
+                <p className="mt-6 font-mono text-xs uppercase tracking-[0.18em] text-white/40">{m.detail}</p>
+              </div>
+
+              <motion.div
+                className="pointer-events-none absolute inset-x-0 -top-px h-px origin-left scale-x-0 bg-gradient-to-r from-ember via-copper to-transparent group-hover:scale-x-100"
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              />
+            </motion.article>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
