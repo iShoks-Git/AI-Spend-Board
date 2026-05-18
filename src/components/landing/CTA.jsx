@@ -14,7 +14,7 @@ export default function CTA() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="display mx-auto max-w-[18ch] text-[clamp(3rem,9vw,9rem)]"
         >
-          Shape your <span className="italic text-ember">spend</span>.
+          Shape your <span className="font-bold text-bone">spend</span>.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}

@@ -11,7 +11,7 @@ export default function Providers() {
           <div>
             <p className="pill mb-6">03 — Providers</p>
             <h2 className="display text-[clamp(2.4rem,5vw,4.6rem)]">
-              Nine sources of truth.<br/><span className="italic text-ember">One shape.</span>
+              Nine sources of truth.<br/><span className="font-bold text-bone">One shape.</span>
             </h2>
           </div>
           <p className="max-w-sm text-white/55">

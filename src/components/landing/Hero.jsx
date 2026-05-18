@@ -70,7 +70,7 @@ export default function Hero() {
 
         <h1 className="display text-[clamp(3.5rem,11vw,11.5rem)]">
           <motion.span custom={1} variants={reveal} initial="hidden" animate="show" className="block">Spend</motion.span>
-          <motion.span custom={2} variants={reveal} initial="hidden" animate="show" className="block italic text-ember">sculpted.</motion.span>
+          <motion.span custom={2} variants={reveal} initial="hidden" animate="show" className="block font-bold text-bone">sculpted.</motion.span>
         </h1>
 
         <motion.p
