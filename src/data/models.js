@@ -1,0 +1,27 @@
+// Model catalogue.
+// n = name, p = provider, c = $/1k tokens (blended), bs = baseline $/mo, av = availability month index.
+export const MODEL_CATALOGUE = [
+  { n: "GPT-4o",            p: "Azure OpenAI",     c: 0.130, bs: 18000, av: 0  },
+  { n: "GPT-4o mini",       p: "Azure OpenAI",     c: 0.014, bs: 4000,  av: 5  },
+  { n: "o3 (Azure)",        p: "Azure OpenAI",     c: 0.350, bs: 9500,  av: 28 },
+  { n: "GPT-4o Direct",     p: "OpenAI Direct",    c: 0.130, bs: 12000, av: 0  },
+  { n: "GPT-4.5",           p: "OpenAI Direct",    c: 0.750, bs: 5500,  av: 22 },
+  { n: "o1",                p: "OpenAI Direct",    c: 0.600, bs: 4200,  av: 18 },
+  { n: "o3-mini",           p: "OpenAI Direct",    c: 0.040, bs: 2800,  av: 26 },
+  { n: "Gemini 1.5 Pro",    p: "GCP Vertex AI",    c: 0.116, bs: 11000, av: 10 },
+  { n: "Gemini Flash 1.5",  p: "GCP Vertex AI",    c: 0.013, bs: 2800,  av: 14 },
+  { n: "Gemini 2.0 Flash",  p: "Google Gemini",    c: 0.010, bs: 3200,  av: 20 },
+  { n: "Gemini 2.5 Pro",    p: "Google Gemini",    c: 0.120, bs: 6500,  av: 30 },
+  { n: "Claude 3.5 Sonnet", p: "Anthropic Direct", c: 0.125, bs: 7200,  av: 13 },
+  { n: "Claude 3 Opus",     p: "Anthropic Direct", c: 0.450, bs: 3100,  av: 10 },
+  { n: "Claude 3.5 Haiku",  p: "Anthropic Direct", c: 0.012, bs: 1400,  av: 17 },
+  { n: "Claude Sonnet GCP", p: "Anthropic/GCP",    c: 0.125, bs: 7400,  av: 15 },
+  { n: "Claude Haiku GCP",  p: "Anthropic/GCP",    c: 0.012, bs: 1000,  av: 16 },
+  { n: "Claude Bedrock",    p: "AWS Bedrock",      c: 0.125, bs: 3800,  av: 8  },
+  { n: "Llama 3 70B",       p: "AWS Bedrock",      c: 0.027, bs: 2200,  av: 12 },
+  { n: "Titan Text",        p: "AWS Bedrock",      c: 0.008, bs: 600,   av: 6  },
+  { n: "DBRX Instruct",     p: "Databricks",       c: 0.008, bs: 1800,  av: 18 },
+  { n: "Llama 3.1 70B DB",  p: "Databricks",       c: 0.006, bs: 2400,  av: 20 },
+  { n: "Phi-3 Medium",      p: "Microsoft AI",     c: 0.006, bs: 1600,  av: 16 },
+  { n: "Mistral Large",     p: "Microsoft AI",     c: 0.040, bs: 2200,  av: 14 },
+];
